@@ -34,5 +34,11 @@ jobs:
           echo "${{ secrets.GOOGLE_CREDENTIALS }}" > credentials/google_credentials.json
           echo "Archivo de credenciales creado."
 
+      - name: 4.5. Crear archivo .env para la API de Gemini
+        run: |
+          echo "Creando archivo .env temporal..."
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+          echo "Archivo .env temporal creado."
+
       - name: 5. Ejecutar el script de automatización
         run: python main.py
