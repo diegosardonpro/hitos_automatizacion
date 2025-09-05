@@ -1,0 +1,6 @@
+# Core libraries for environment management
+python-dotenv
+
+# Libraries for Google Sheets API
+gspread
+google-auth-oauthlib
